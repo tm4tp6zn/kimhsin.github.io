@@ -87,7 +87,7 @@ h4.heading {
   left: 0px;
 }
 .bg-2 {
-  background: url(/img/01-bg.png) no-repeat right;
+  background: url(../img/01-bg.png) no-repeat right;
   background-size: 105%;
 }
 .serviceList ul {
