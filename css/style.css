@@ -1,3 +1,22 @@
+.navbar {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: #4592d6 !important;
+}
+.bg-light {
+  background-color: #fff !important;
+}
+header {
+  margin-top: 80px;
+}
 img {
   max-width: 100%;
 }
@@ -9,6 +28,7 @@ img {
   font-weight: bold;
   color: #1970be;
   letter-spacing: 0.1rem;
+  margin-bottom: 30px;
 }
 
 .btn.btn-primary {
@@ -61,11 +81,21 @@ h4.heading {
   justify-content: center;
 }
 
-#medical {
-}
-
 #note {
   background-color: rgb(76, 161, 114);
+  position: relative;
+}
+
+#note::after {
+  position: absolute;
+  content: "";
+  z-index: 1;
+  clip-path: polygon(0 0, 100% 100%, 100% 0);
+  background-color: #ffffff;
+  width: 9%;
+  height: 42%;
+  top: -1px;
+  right: 0px;
 }
 
 #service {
@@ -154,12 +184,20 @@ h4.heading {
   margin: 10px;
 }
 
+h5.card-title {
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 26px;
+}
+
 .profile {
   background-color: #fff;
   box-shadow: 1px 1px 15px #7c7c7c78;
   margin-bottom: 40px;
 }
-
+.serviceList ul {
+  text-align: center;
+}
 #note ol li {
   color: #fff;
   line-height: 26px;
@@ -196,9 +234,6 @@ footer {
 /* 	xs尺寸開始*/
 
 @media (max-width: 576px) {
-  .serviceList ul {
-    text-align: center;
-  }
   .serviceList ul li {
     width: 70%;
   }
