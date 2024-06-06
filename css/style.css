@@ -1,0 +1,205 @@
+img {
+  max-width: 100%;
+}
+.title {
+  margin-bottom: 1rem;
+}
+.title h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1970be;
+  letter-spacing: 0.1rem;
+}
+
+.btn.btn-primary {
+  margin-top: 0.5rem;
+  padding: 0.3rem 1.8rem;
+  border-radius: 0px;
+  background-color: #4592d6;
+  border-color: #4592d6;
+}
+
+.btn.btn-primary:focus,
+.btn.btn-primary:active,
+.btn.btn-primary:hover {
+  background-color: #39a878;
+  border-color: #39a878;
+}
+
+h4.heading {
+  color: #39a878;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+/* 關於我們*/
+
+#ABOUT {
+  position: relative;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  z-index: 1;
+}
+#ABOUT::after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 26% 100%);
+  background-color: #66d5a55e;
+  width: 44%;
+  height: 50%;
+  bottom: 0px;
+  right: 0px;
+}
+
+.ABOUT-pic {
+  margin-bottom: 3%;
+}
+.about-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#medical {
+}
+
+#note {
+  background-color: rgb(76, 161, 114);
+}
+
+#service {
+  z-index: 1;
+  position: relative;
+  padding-top: 4%;
+  padding-bottom: 3%;
+}
+
+#service::after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  clip-path: polygon(0 0, 0 0, 75% 100%, 0% 100%);
+  background-color: #4592d657;
+  width: 15%;
+  height: 50%;
+  bottom: 0px;
+  left: 0px;
+}
+.bg-2 {
+  background: url(/img/01-bg.png) no-repeat right;
+  background-size: 105%;
+}
+.serviceList ul {
+  padding-left: 0;
+}
+.serviceList ul li {
+  font-size: 18px;
+  text-align: center;
+  display: inline-block;
+  padding: 2% 4%;
+  margin: 2% 1%;
+  background-color: #ffffff00;
+  border: 1px solid;
+  border-color: #66d5a5;
+  width: 43%;
+  color: #707070;
+  transition: 0.4s;
+}
+
+.serviceList ul li:hover,
+.serviceList ul li:active,
+.serviceList ul li:focus {
+  background-color: #66d5a5;
+  color: #fff;
+  cursor: pointer;
+}
+
+#medical {
+  background-color: #4592d6;
+  position: relative;
+  padding-top: 2%;
+  padding-bottom: 3%;
+}
+
+.colum {
+  position: relative;
+  z-index: 1;
+}
+
+#medical::after {
+  position: absolute;
+  content: "";
+  z-index: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 37%;
+  bottom: 0px;
+  left: 0px;
+}
+.colorWhite h1 {
+  color: #fff;
+}
+
+.card-footer.custom-made {
+  display: flex;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  background-color: rgb(255 255 255 / 3%);
+  border-top: none;
+}
+
+.card {
+  width: 20%;
+  margin: 10px;
+}
+
+.profile {
+  background-color: #fff;
+  box-shadow: 1px 1px 15px #7c7c7c78;
+  margin-bottom: 40px;
+}
+
+#note ol li {
+  color: #fff;
+  line-height: 26px;
+}
+
+footer {
+  background-color: #1970be;
+  padding-top: 5%;
+}
+
+/* 	lg尺寸開始*/
+@media (max-width: 992px) {
+  .bg-2 {
+    background-size: 200%;
+  }
+  .serviceList ul li {
+    background-color: #4592d6;
+    color: #fff;
+  }
+}
+
+/* 	md尺寸開始*/
+@media (max-width: 768px) {
+  .bg-2 {
+    background-size: 700%;
+  }
+}
+
+/* 	sm尺寸開始*/
+
+@media (min-width: 576px) and (max-width: 768px) {
+}
+
+/* 	xs尺寸開始*/
+
+@media (max-width: 576px) {
+  .serviceList ul {
+    text-align: center;
+  }
+  .serviceList ul li {
+    width: 70%;
+  }
+}
