@@ -1,3 +1,7 @@
+p {
+  line-height: 26px;
+  color: #313131;
+}
 .navbar {
   position: fixed !important;
   top: 0;
@@ -8,9 +12,34 @@
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.show,
-.navbar-light .navbar-nav .show > .nav-link {
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
   color: #4592d6 !important;
 }
+
+.navbar-light .navbar-nav .nav-link {
+  color: #313131 !important;
+}
+.navbar .dropdown-menu {
+  border-radius: 0px;
+  border: 0px;
+  padding: 0;
+  font-size: 16px;
+  color: #313131;
+}
+.navbar .dropdown-item {
+  padding: 1rem 1.3rem;
+  transition: 0.4s;
+}
+
+.navbar .dropdown-item:focus,
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:active {
+  background-color: #66d5a5;
+  color: #fff;
+}
+
 .bg-light {
   background-color: #fff !important;
 }
@@ -51,7 +80,9 @@ h4.heading {
   font-size: 21px;
   font-weight: bold;
 }
-
+.flex {
+  display: flex;
+}
 /* 關於我們*/
 
 #ABOUT {
@@ -82,10 +113,15 @@ h4.heading {
 }
 
 #note {
+  background: url(../img/note.jpg) no-repeat right;
+  background-size: 105%;
   background-color: rgb(76, 161, 114);
   position: relative;
 }
 
+#note P {
+  color: #fff;
+}
 #note::after {
   position: absolute;
   content: "";
@@ -201,8 +237,33 @@ h5.card-title {
 #note ol li {
   color: #fff;
   line-height: 26px;
+  font-weight: bold;
+  font-size: 17px;
 }
 
+#newlist .title {
+  display: flex;
+  /* padding: 3rem; */
+  align-items: center;
+  width: 20%;
+  justify-content: center;
+}
+
+#newlist h1 {
+  margin-bottom: 0px;
+}
+.new-list {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+#newlist li {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: inline-flex;
+  width: 100%;
+  border-bottom: 1px solid #1212;
+}
 footer {
   background-color: #1970be;
   padding-top: 5%;
@@ -217,12 +278,24 @@ footer {
     background-color: #4592d6;
     color: #fff;
   }
+  .navbar .dropdown-item {
+    padding: 1rem 1.3rem;
+    transition: 0.4s;
+    border-bottom: 1px solid #ebebeb;
+  }
+  #note {
+    background-size: 200%;
+  }
 }
 
 /* 	md尺寸開始*/
 @media (max-width: 768px) {
   .bg-2 {
     background-size: 700%;
+  }
+  .navbar .navbar-light .navbar-toggler {
+    border: 0px;
+    border-color: ;
   }
 }
 
